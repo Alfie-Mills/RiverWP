@@ -1,4 +1,4 @@
-/******************************************************************
+    /******************************************************************
 
 Stylesheet: Login Stylesheet
 
@@ -13,35 +13,220 @@ For more info, check out the codex:
 http://codex.wordpress.org/Creating_Admin_Themes
 
 ******************************************************************/
-
-body.login {
-	
-}
-
-#login {
-	
-}
-
-// Change the login logo
-.login h1 a {
-	background: url(../images/login-logo.png) no-repeat top center;
-	width: 326px;
-	height: 67px;
-	text-indent: -9999px;
-	overflow: hidden;
-	padding-bottom: 15px;
-	display: block;
-}
-
-form {
-
-}
-
-body form .input {
-
-}
-
-// Login Button Style
-#wp-submit {
-	
-}
+    
+    @import "settings";
+    body.login {}
+    
+    #login {}
+    
+    // Change the login logo
+    .login h1 a {
+        background: none;
+        width: 326px;
+        height: 90px;
+    }
+    
+    form {}
+    
+    .dashicons {
+        color: $primary-color;
+        top: 0 !important;
+    }
+    
+    .wp-core-ui .button-primary {
+        background: $primary-color;
+        border-color: $primary-color;
+    }
+    
+    body form .input {
+        border: none;
+        border-bottom: none;
+        &:focus {
+            border-color: $primary-color;
+            box-shadow: 0 0 0 1px $primary-color;
+            outline: 2px solid transparent;
+        }
+    }
+    
+    input[type=checkbox]:checked::before {
+        content: url(data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20viewBox%3D%270%200%2020%2020%27%3E%3Cpath%20d%3D%27M14.83%204.89l1.34.94-5.81%208.38H9.02L5.78%209.67l1.34-1.25%202.57%202.4z%27%20%2F%3E%3C%2Fsvg%3E);
+        margin: -.1875rem 0 0 -.25rem;
+        height: 1.3125rem;
+        width: 1.3125rem;
+    }
+    
+    input[type=checkbox],
+    input[type=radio],
+    input[type=checkbox]:focus,
+    input[type=radio]:focus {
+        border: 1px solid $primary-color;
+        background: rgba(255, 255, 255, 0.8);
+    }
+    
+    input[type=checkbox]:focus,
+    input[type=radio]:focus {
+        box-shadow: 0 0 0 1px $primary-color
+    }
+    
+    .login .button.wp-hide-pw:focus {
+        background: 0 0;
+        border-color: $primary-color;
+        box-shadow: 0 0 0 1px $primary-color;
+        outline: 2px solid transparent;
+    }
+    
+    .wp-core-ui .button-primary.focus,
+    .wp-core-ui .button-primary.hover,
+    .wp-core-ui .button-primary:focus,
+    .wp-core-ui .button-primary:hover {
+        border-color: $primary-color;
+    }
+    
+    .wp-core-ui .button-primary.focus,
+    .wp-core-ui .button-primary:focus {
+        box-shadow: 0 0 0 1px #fff, 0 0 0 3px $primary-color;
+    }
+    
+    .login label {
+        color: white;
+    }
+    
+    .login input[type=text],
+    .login input[type=password] {
+        background: rgba(255, 255, 255, 0.8);
+    }
+    
+    // Login Button Style
+    #wp-submit {
+        background: $primary-color;
+    }
+    
+    p.message {
+        text-align: center;
+    }
+    
+    .login #backtoblog a,
+    .login #nav a {
+        color: #cccccc;
+        &:hover {
+            color: white;
+        }
+    }
+    
+    a:focus {
+        color: rgba($color: $primary-color, $alpha: 0.8);
+        box-shadow: 0 0 0 1px $primary-color, 0 0 1px 1px white;
+        border-radius: 8px;
+    }
+    
+    .login #backtoblog a:focus,
+    .login #nav a:focus,
+    .login h1 a:focus {
+        color: #fff;
+    }
+    
+    .login form {
+        background: rgba(255, 255, 255, 0.25);
+        backdrop-filter: blur(30px);
+    }
+    
+    .login form,
+    p.message,
+    #login_error {
+        border-left: none !important;
+        border-radius: 10px;
+        border: none;
+        box-shadow: rgba($color: #000000, $alpha: 0.2) 0 0 10px;
+        background-color: rgba(255, 255, 255, 0.25) !important;
+        backdrop-filter: blur(30px);
+        color: white;
+    }
+    
+    .input[type=checkbox] {
+        border: none !important;
+    }
+    
+    html {
+        overflow: hidden;
+        width: 100vw;
+    }
+    
+    body {
+        background: $primary-color;
+    }
+    
+    .circle {
+        position: absolute;
+        border-radius: 50%;
+        background: white;
+        animation: ripple 15s infinite;
+        box-shadow: 0px 0px 1px 0px rgba($color: $primary-color, $alpha: 0.8);
+        pointer-events: none;
+    }
+    
+    .small {
+        width: 20vw;
+        height: 20vw;
+        left: -10vw;
+        bottom: -10vw;
+    }
+    
+    .medium {
+        width: 40vw;
+        height: 40vw;
+        left: -20vw;
+        bottom: -20vw;
+    }
+    
+    .large {
+        width: 60vw;
+        height: 60vw;
+        left: -30vw;
+        bottom: -30vw;
+    }
+    
+    .xlarge {
+        width: 80vw;
+        height: 80vw;
+        left: -40vw;
+        bottom: -40vw;
+    }
+    
+    .xxlarge {
+        width: 100vw;
+        height: 100vw;
+        left: -50vw;
+        bottom: -50vw;
+    }
+    
+    .shade1 {
+        opacity: 0.2;
+    }
+    
+    .shade2 {
+        opacity: 0.5;
+    }
+    
+    .shade3 {
+        opacity: 0.7;
+    }
+    
+    .shade4 {
+        opacity: 0.8;
+    }
+    
+    .shade5 {
+        opacity: 0.9;
+    }
+    
+    @keyframes ripple {
+        0% {
+            transform: scale(0.8);
+        }
+        50% {
+            transform: scale(1.2);
+        }
+        100% {
+            transform: scale(0.8);
+        }
+    }

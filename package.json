@@ -1,12 +1,12 @@
 {
-    "name": "jointswp-sass",
+    "name": "riverwp-sass",
     "version": "5.0.0",
-    "description": "A WordPress starter theme using Foundation 6",
+    "description": "A WordPress starter theme using Foundation 6 and JointsWP",
     "repository": {
         "type": "git",
         "url": "https://github.com/JeremyEnglert/JointsWP.git"
     },
-    "author": "Jeremy Englert",
+    "author": "Alfie Mills",
     "license": "GPL-2.0 AND MIT",
     "homepage": "https://github.com/JeremyEnglert/JointsWP",
     "devDependencies": {
